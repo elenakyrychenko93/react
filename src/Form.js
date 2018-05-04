@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {BaseRequests} from "./fetchRequests";
-import EventEmitter from "emitter-js/dist/emitter";
+import {newsEmitter} from './EE'
 
 const requests = new BaseRequests();
 let ee = require('event-emitter');
-let emitter = new EventEmitter(), listener;
+let emitter = newsEmitter, listener;
 
 export class AddForm extends Component {
     constructor(props) {

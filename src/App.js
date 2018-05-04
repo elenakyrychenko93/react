@@ -4,6 +4,7 @@ import {BaseRequests} from "./fetchRequests";
 import {AddForm, OpenAddForm} from './Form';
 import Article from './Article';
 import './App.css';
+import {newsEmitter} from './EE'
 import EventEmitter from '../node_modules/emitter-js/dist/emitter';
 
 let ArticlesList = [];
@@ -29,7 +30,7 @@ const requests = new BaseRequests();
 
 //Emitter
 let ee = require('event-emitter');
-let emitter = new EventEmitter(), listener;
+let emitter = newsEmitter, listener;
 ee(EventEmitter.prototype);
 
 
